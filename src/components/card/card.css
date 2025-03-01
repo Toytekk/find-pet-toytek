@@ -1,0 +1,50 @@
+.custom-border {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: solid 2px var(--foreground);
+    box-shadow: 3px 3px 0 2px var(--foreground);
+    background-color: rgb(159, 109, 206);
+}
+
+h2 {
+    font-family: var(--font-audiowide);
+}
+
+.cardHover {
+    transition: all 0.3s;
+
+    h2 {
+        transition: all 0.3s;
+        font-size: 2rem;
+    }
+
+    p {
+        padding-top: 0px;
+        transition: all 0.3s;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .info {
+        background: linear-gradient(rgba(159, 109, 206, 0) 10%, rgba(159, 109, 206, 1) 69%)
+    }
+
+}
+
+.cardHover:hover {
+
+    h2 {
+        padding-top: 8px;
+    }
+
+    p {
+        padding-top: 12px;
+        transition: all 0.3s;
+        height: auto;
+    }
+
+    .info {
+        background: linear-gradient(rgba(159, 109, 206, 0) 10%, rgba(159, 109, 206, 1) 30%)
+    }
+}

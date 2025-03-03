@@ -9,6 +9,7 @@
 
 h2 {
     font-family: var(--font-audiowide);
+    font-size: 1.2rem;
 }
 
 .cardHover {
@@ -16,7 +17,7 @@ h2 {
 
     h2 {
         transition: all 0.3s;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     p {
@@ -27,7 +28,8 @@ h2 {
     }
 
     .info {
-        background: linear-gradient(rgba(159, 109, 206, 0) 10%, rgba(159, 109, 206, 1) 69%)
+        transition: all 0.3s;
+        background: linear-gradient(rgba(159, 109, 206, 0) 0px, rgba(159, 109, 206, 1) 100px)
     }
 
 }
@@ -41,10 +43,9 @@ h2 {
     p {
         padding-top: 12px;
         transition: all 0.3s;
-        height: auto;
+        height: calc-size(max-content, size);
+
     }
 
-    .info {
-        background: linear-gradient(rgba(159, 109, 206, 0) 10%, rgba(159, 109, 206, 1) 30%)
-    }
+
 }

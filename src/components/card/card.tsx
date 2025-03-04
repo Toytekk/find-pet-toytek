@@ -1,10 +1,9 @@
 import React from 'react';
-import { CardProps } from './card.props';
 import './card.css';
 import { useFavorites } from '@/context/FavoritesContext';
 import Button from '@/components/ui/button';
 
-const Card = ({ animal }: CardProps) => {
+const Card = ({ animal }: { animal: Animal }) => {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const url = animal.photos.length > 0 ? animal.photos[0].medium : '';
   const isFav = isFavorite(animal.id);

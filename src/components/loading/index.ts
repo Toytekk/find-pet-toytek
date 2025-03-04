@@ -1,0 +1,1 @@
+export { AnimatedLoading } from './loading';

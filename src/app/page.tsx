@@ -5,6 +5,7 @@ import Pet from './api/pets/pet';
 import type { PetType } from './api/types/type';
 import { Header } from '@/components/header';
 import { SectionSteps } from '@/components/section-steps';
+import { AnimatedLoading } from '@/components/loading';
 
 export default function Home() {
   const [animals, setAnimals] = useState<Pet[]>([]);
@@ -134,11 +135,9 @@ export default function Home() {
   const filteredAnimals = animals.filter((animal) => animal.photos.length > 0);
 
   if (loading && step === 'type')
-    return <div className="p-8 text-center">Loading animal types...</div>;
+    return <AnimatedLoading text="Loading animal types..." />;
   if (loading && step === 'results')
-    return (
-      <div className="p-8 text-center">Finding perfect pets for you...</div>
-    );
+    return <AnimatedLoading text="Finding perfect pets for you..." />;
   if (error) return <div className="p-8 text-center text-red-500">{error}</div>;
 
   if (step !== 'results') {

@@ -1,3 +1,5 @@
+'use client';
+
 import { useFavorites } from '@/context/FavoritesContext';
 import Button from '@/components/ui/button';
 import { useState, useEffect } from 'react';

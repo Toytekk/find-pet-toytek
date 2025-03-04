@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-in-repeat {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

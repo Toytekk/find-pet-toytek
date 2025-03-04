@@ -134,10 +134,8 @@ export default function Home() {
 
   const filteredAnimals = animals.filter((animal) => animal.photos.length > 0);
 
-  if (loading && step === 'type')
-    return <AnimatedLoading text="Loading animal types..." />;
-  if (loading && step === 'results')
-    return <AnimatedLoading text="Finding perfect pets for you..." />;
+  if (loading) return <AnimatedLoading />;
+
   if (error) return <div className="p-8 text-center text-red-500">{error}</div>;
 
   if (step !== 'results') {

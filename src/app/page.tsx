@@ -188,8 +188,8 @@ export default function Home() {
         />
 
         <div className="mb-[130px] grid grid-cols-2 gap-4 md:grid-cols-5">
-          {filteredAnimals.map((animal, i) => (
-            <Card animal={animal} key={i} />
+          {filteredAnimals.map((pet, i) => (
+            <Card pet={pet} key={i} />
           ))}
         </div>
       </div>

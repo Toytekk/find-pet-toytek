@@ -2,18 +2,19 @@ import React from 'react';
 import './card.css';
 import { useFavorites } from '@/context/FavoritesContext';
 import Button from '@/components/ui/button';
+import Pet from '@/app/api/pets/pet';
 
-const Card = ({ animal }: { animal: Animal }) => {
+const Card = ({ pet }: { pet: Pet }) => {
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
-  const url = animal.photos.length > 0 ? animal.photos[0].medium : '';
-  const isFav = isFavorite(animal.id);
+  const url = pet.photos.length > 0 ? pet.photos[0].medium : '';
+  const isFav = isFavorite(pet.id);
 
   const toggleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isFav) {
-      removeFavorite(animal.id);
+      removeFavorite(pet.id);
     } else {
-      addFavorite(animal);
+      addFavorite(pet);
     }
   };
 
@@ -34,9 +35,9 @@ const Card = ({ animal }: { animal: Animal }) => {
           >
             {isFav ? '❤️' : '🤍'}
           </Button>
-          <h2 className="ml-1 truncate">{animal.name}</h2>
+          <h2 className="ml-1 truncate">{pet.name}</h2>
         </div>
-        <p className="mt-1">{animal.description}</p>
+        <p className="mt-1">{pet.description}</p>
       </div>
     </div>
   );

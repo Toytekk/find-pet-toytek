@@ -8,7 +8,6 @@ import './favorites-bar.css';
 const FavoritesBar = () => {
   const { favorites, removeFavorite, notification, clearNotification } =
     useFavorites();
-  const [isExpanded, setIsExpanded] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [visibleNotification, setVisibleNotification] = useState<string | null>(
     null

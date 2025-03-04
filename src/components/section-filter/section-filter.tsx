@@ -33,7 +33,7 @@ export function SectionFilter({
             <Button
               key={i}
               onClick={() => onSelect(option)}
-              className={`cartoon-border flex flex-col items-center justify-center gap-2 ${
+              className={`cartoon-border flex h-32 flex-col items-center justify-center gap-2 ${
                 selectedValue === option
                   ? '!bg-yellow-400 !text-purple-900 hover:!bg-yellow-200'
                   : '!bg-white/90 !text-purple-950 hover:!bg-purple-300'
@@ -52,7 +52,7 @@ export function SectionFilter({
           ))}
           <Button
             onClick={() => onSelect(null)}
-            className={`cartoon-border col-span-2 flex h-full w-full flex-col items-center justify-center gap-2 md:col-span-3 ${
+            className={`cartoon-border col-span-2 flex h-32 flex-col items-center justify-center gap-2 md:col-span-3 ${
               selectedValue === null
                 ? '!bg-yellow-400 !text-purple-900 hover:!bg-yellow-200'
                 : '!bg-white/90 !text-purple-950 hover:!bg-purple-300'

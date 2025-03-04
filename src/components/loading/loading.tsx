@@ -1,17 +1,13 @@
-interface AnimatedLoadingProps {
-  text: string;
-}
-
-export function AnimatedLoading({ text }: AnimatedLoadingProps) {
+export function AnimatedLoading() {
   const emojis = ['🐶', '🐱', '🐰', '🐹', '🐴', '🐦', '🐠', '🐮'];
   return (
     <div className="flex h-[80vh] flex-col items-center justify-center">
       <div className="text-center">
-        <div className="mb-8 flex justify-center gap-3">
+        <div className="mb-8 flex justify-center gap-1">
           {emojis.map((emoji, i) => (
             <span
               key={i}
-              className="text-4xl"
+              className="text-3xl"
               style={{
                 display: 'inline-block',
                 transform: `scale(0)`,
@@ -22,10 +18,9 @@ export function AnimatedLoading({ text }: AnimatedLoadingProps) {
             </span>
           ))}
         </div>
-        <h2 className="mb-4 text-2xl font-bold">
-          Looking for your new best friend...
+        <h2 className="max-w-90vw mb-4 text-xl font-bold">
+          Looking for your best friend...
         </h2>
-        <p className="text-lg">{text}</p>
       </div>
     </div>
   );

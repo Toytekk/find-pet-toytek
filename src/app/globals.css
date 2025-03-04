@@ -17,3 +17,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 16px;
 }
+
+.cartoon-border {
+  border-radius: 8px;
+  outline: solid 2px var(--foreground);
+  box-shadow: 3px 3px 0 2px var(--foreground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-audiowide);
+}
+
+.font-audiowide {
+  font-family: 'Audiowide', cursive;
+}

@@ -1,0 +1,13 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx", "cva", "tw"],
+  "tailwindAttributes": ["className", "class", "tw"],
+  "tailwindConfig": "./tailwind.config.ts",
+  "classDisplay": "newline-per-class",
+  "classOrder": "alphabetical"
+}

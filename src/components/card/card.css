@@ -1,51 +1,40 @@
-.custom-border {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    outline: solid 2px var(--foreground);
-    box-shadow: 3px 3px 0 2px var(--foreground);
-    background-color: rgb(159, 109, 206);
+.card-border {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(159, 109, 206);
 }
 
 h2 {
-    font-family: var(--font-audiowide);
-    font-size: 1.2rem;
+  font-family: var(--font-audiowide);
+  font-size: 1.2rem;
+  transition: all 0.3s;
 }
 
-.cardHover {
-    transition: all 0.3s;
-
-    h2 {
-        transition: all 0.3s;
-        font-size: 1.5rem;
-    }
-
-    p {
-        padding-top: 0px;
-        transition: all 0.3s;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .info {
-        transition: all 0.3s;
-        background: linear-gradient(rgba(159, 109, 206, 0) 0px, rgba(159, 109, 206, 1) 100px)
-    }
-
+.info {
+  background: linear-gradient(
+    rgba(159, 109, 206, 0) 0px,
+    rgba(159, 109, 206, 1) 100px
+  );
+  transition: all 0.3s;
 }
 
-.cardHover:hover {
+p {
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
 
-    h2 {
-        padding-top: 8px;
-    }
+.card-container {
+  transition: all 0.3s;
+}
 
-    p {
-        padding-top: 12px;
-        transition: all 0.3s;
-        height: calc-size(max-content, size);
+.card-container:hover h2 {
+  padding-top: 8px;
+}
 
-    }
-
-
+.card-container:hover p {
+  padding-top: 12px;
+  transition: all 0.3s;
+  height: calc-size(max-content, size);
 }
